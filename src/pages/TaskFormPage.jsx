@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box, Container, Alert } from '@mui/material';
 import { TaskForm } from '../components/TaskForm';
@@ -20,7 +20,6 @@ export const TaskFormPage = () => {
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Загрузка задачи при редактировании
   useEffect(() => {
     if (isEditing) {
       taskApi.getById(id)
@@ -37,7 +36,6 @@ export const TaskFormPage = () => {
     e.preventDefault();
     setError('');
 
-    // Валидация
     if (!task.title.trim()) {
       setError('Название обязательно');
       return;

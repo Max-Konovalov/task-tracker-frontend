@@ -1,4 +1,3 @@
-import React from 'react';
 import { TextField, FormControl, InputLabel, Select, MenuItem, Button, Box, Typography } from '@mui/material';
 
 export const TaskForm = ({ task, onChange, onSubmit, isSubmitting, title = 'Задача' }) => {

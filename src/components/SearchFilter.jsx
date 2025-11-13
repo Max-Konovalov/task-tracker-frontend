@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, TextField, FormControl, InputLabel, Select, MenuItem, Button } from '@mui/material';
 
 export const SearchFilter = ({ filters, onFilterChange, onSearch, onReset }) => {
