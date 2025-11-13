@@ -1,7 +1,7 @@
 // src/api/taskApi.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:80/api';
+const API_BASE_URL = 'http://aeza-3xui:80/api';
 
 export const taskApi = {
   getAll: (params = {}) => {
