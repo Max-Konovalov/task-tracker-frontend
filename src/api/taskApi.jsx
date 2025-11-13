@@ -1,7 +1,7 @@
 // src/api/taskApi.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'http://localhost:8000/api';
 
 export const taskApi = {
   getAll: (params = {}) => {
@@ -11,7 +11,7 @@ export const taskApi = {
     );
     return axios.get(`${API_BASE_URL}/tasks/`, { params: cleanParams });
   },
-  
+
   getStats: () => axios.get(`${API_BASE_URL}/tasks/count`),
 
   getById: (id) => axios.get(`${API_BASE_URL}/tasks/${id}`),
